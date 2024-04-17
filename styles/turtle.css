@@ -12,3 +12,7 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
 }
+.carousel-inner img {
+    height: 300px;  /* Adjust this value as needed */
+    object-fit: cover;  /* This keeps the aspect ratio while covering the area */
+}
