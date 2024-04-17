@@ -11,22 +11,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <style>
-#carouselExampleFade {
-  width: 80%; /* Adjust width as needed */
-  margin: 0 auto; /* Center the carousel horizontally */
-  animation: spin 1s linear 2; /* Apply animation */
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-    </style>
 </head>
 
 <body>
@@ -53,7 +37,7 @@
         </div>
       </nav>
       <section>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="../images/turtle1.jpg" class="d-block w-100" alt="turtle1">
@@ -75,7 +59,43 @@
             </button>
           </div>
       </section>
-    <p>Turtles are one of the most fascinating creatures on the Earth. Let's Appreciate them!</p>
+    <p class="text-center">Turtles are one of the most fascinating creatures on the Earth. Let's Appreciate them!</p>
+    <div class="container mt-4">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Lifespan</th>
+                    <th>Habitat</th>
+                    <th>Diet</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Turtles</td>
+                    <td>20-40 years</td>
+                    <td>Freshwater and terrestrial</td>
+                    <td>Omnivores (mostly plant material)</td>
+                    <td>Varies widely</td>
+                </tr>
+                <tr>
+                    <td>Tortoises</td>
+                    <td>80-150 years</td>
+                    <td>Dry land</td>
+                    <td>Herbivores (grasses, weeds)</td>
+                    <td>Up to 4 feet</td>
+                </tr>
+                <tr>
+                    <td>Sea Turtles</td>
+                    <td>30-50 years, up to 80 years in captivity</td>
+                    <td>Oceanic</td>
+                    <td>Omnivores (jellyfish, algae, crustaceans)</td>
+                    <td>Up to 6 feet</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 
