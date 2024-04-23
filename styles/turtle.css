@@ -1,18 +1,113 @@
+/* General body styling for all pages */
 body {
-    background-color: green;
-    flex-direction: column;
+    background-color: #e7f5f2; /* Light, aquatic-themed background for readability */
+    color: #333; /* Universal dark text for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+    line-height: 1.8; /* Enhances readability by spacing lines appropriately */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
-#carouselexamplefade {
-    align-items: center;
-    display: flex;
+
+/* Navbar styling consistent across all pages */
+.navbar {
+    background-color: #024e76; /* Oceanic blue to resonate with aquatic themes */
+    border-bottom: 3px solid #023e58; /* Visual separation with a thematic color */
+    padding: 0.5rem 1rem; /* Comfortable padding */
 }
-p {
-    background-color: green;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
+
+/* Carousel images styling for visual consistency */
 .carousel-inner img {
-    height: 300px;  /* Adjust this value as needed */
-    object-fit: cover;  /* This keeps the aspect ratio while covering the area */
+    height: auto; /* Adaptive height for responsiveness */
+    max-height: 600px; /* Ensures visibility across devices */
+    width: 100%;
+    object-fit: cover; /* Maintains aspect ratio without distortion */
+}
+
+/* Table styling applicable for all themes */
+.table {
+    margin-top: 30px; /* Uniform spacing for visual clarity */
+    background-color: #fff; /* Clean background for the table data */
+    border-radius: 8px; /* Soft edges for modern aesthetics */
+    overflow: hidden; /* Ensures nothing spills outside the border radius */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadows for a slight 3D effect */
+}
+
+th, td {
+    padding: 15px; /* Ample space within cells for content */
+    text-align: center; /* Central alignment for a neat presentation */
+    border-bottom: 2px solid #f0f0f0; /* Gentle contrast for separation */
+}
+
+/* Headers across all pages for unifying theme */
+h2, h3 {
+    color: #017481; /* Subdued green-blue for thematic consistency */
+    font-weight: 600; /* Bolder for emphasis */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraph styling across all content areas */
+p {
+    padding: 25px; /* Substantial padding for standalone visibility */
+    background-color: #d1f0f2; /* Gentle on the eyes, fitting the aquatic theme */
+    border-radius: 10px; /* Modern rounded corners */
+    max-width: 80%;
+    margin: 20px auto; /* Centered for focus */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Depth adding shadow */
+}
+
+/* Responsive embedded content */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 20px; /* Space below for separation */
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%; /* 16:9 aspect ratio for videos */
+}
+
+.embed-responsive .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Button styles for functional navigation */
+.btn-dark {
+    background-color: #045e75; /* Deeper sea color */
+    border: none;
+}
+
+/* Dropdown menu styling for cohesive look */
+.dropdown-menu-dark .dropdown-item {
+    background-color: #024e76; /* Consistent with the navbar */
+}
+
+.dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
+    background-color: #023e58; /* Darker on hover for feedback */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 300px; /* Adjusts for mobile viewing */
+    }
+
+    .navbar {
+        padding: 0.25rem 1rem; /* Smaller padding on smaller screens */
+    }
+
+    p, .table, .embed-responsive {
+        padding: 15px; /* Adjusted padding for smaller devices */
+    }
 }
